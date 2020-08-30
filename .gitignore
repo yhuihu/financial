@@ -1,2 +1,6 @@
 # Project exclude paths
 /commons/oauth-client-commons/target/
+/.idea/
+/business/auth-business/target/
+/provider/user-provider-service/target/
+/provider/user-provider-api/target/

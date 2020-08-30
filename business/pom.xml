@@ -12,7 +12,7 @@
     <artifactId>business</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>oauth-service</module>
+        <module>auth-business</module>
     </modules>
     <dependencies>
 

@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: classification-provider
+  main:
+    allow-bean-definition-overriding: true
+dubbo:
+  scan:
+    base-packages: xyz.yhhu.financial.provider.service
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+  registry:
+    address: nacos://127.0.0.1
+    port: 8848
+mybatis:
+  type-aliases-package: xyz.yhhu.financial.provider.domain
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  level:
+    com:
+      study:
+        shop:
+          provider:
+            mapper: DEBUG
+mapper:
+  not-empty: true

@@ -8,7 +8,8 @@ import lombok.Data;
 
 /**
     * 角色权限对应表
-    */
+ * @author tiger
+ */
 @Data
 @TableName(value = "tb_role_permission")
 public class TbRolePermission {
