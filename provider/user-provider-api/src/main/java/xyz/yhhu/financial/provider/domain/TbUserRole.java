@@ -6,33 +6,30 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.util.Date;
-
 /**
- * 用户，角色对应表
- * @author admin
+ * 用户角色表
  */
 @Data
 @TableName(value = "tb_user_role")
 public class TbUserRole {
-    @TableId(value = "id", type = IdType.ASSIGN_ID)
+    @TableId(value = "id", type = IdType.INPUT)
     private Long id;
 
     /**
-     * 用户id
+     * 用户 ID
      */
     @TableField(value = "user_id")
     private Long userId;
 
     /**
-     * 角色id
+     * 角色 ID
      */
     @TableField(value = "role_id")
     private Long roleId;
 
-    /**
-     * 创建时间
-     */
-    @TableField(value = "create_time")
-    private Date createTime;
+    public static final String COL_ID = "id";
+
+    public static final String COL_USER_ID = "user_id";
+
+    public static final String COL_ROLE_ID = "role_id";
 }

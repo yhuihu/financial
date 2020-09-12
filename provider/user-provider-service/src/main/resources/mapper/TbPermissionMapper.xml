@@ -5,15 +5,16 @@
     <!--@mbg.generated-->
     <!--@Table tb_permission-->
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="permission_name" jdbcType="VARCHAR" property="permissionName" />
-    <result column="url" jdbcType="VARCHAR" property="url" />
     <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="enname" jdbcType="VARCHAR" property="enname" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
     <result column="description" jdbcType="VARCHAR" property="description" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+    <result column="updated" jdbcType="TIMESTAMP" property="updated" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    id, permission_name, url, parent_id, description, create_time, update_time
+    id, parent_id, `name`, enname, url, description, created, updated
   </sql>
 </mapper>

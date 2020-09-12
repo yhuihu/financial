@@ -9,38 +9,55 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author admin
+ * 角色表
  */
 @Data
 @TableName(value = "tb_role")
 public class TbRole {
-    /**
-     * 主键
-     */
-    @TableId(value = "id", type = IdType.ASSIGN_ID)
+    @TableId(value = "id", type = IdType.INPUT)
     private Long id;
 
     /**
-     * 角色名
+     * 父角色
      */
-    @TableField(value = "name")
+    @TableField(value = "parent_id")
+    private Long parentId;
+
+    /**
+     * 角色名称
+     */
+    @TableField(value = "`name`")
     private String name;
 
     /**
-     * 状态
+     * 角色英文名称
      */
-    @TableField(value = "status")
-    private Boolean status;
+    @TableField(value = "enname")
+    private String enname;
 
     /**
-     * 创建时间
+     * 备注
      */
-    @TableField(value = "create_time")
-    private Date createTime;
+    @TableField(value = "description")
+    private String description;
 
-    /**
-     * 更新时间
-     */
-    @TableField(value = "update_time")
-    private Date updateTime;
+    @TableField(value = "created")
+    private Date created;
+
+    @TableField(value = "updated")
+    private Date updated;
+
+    public static final String COL_ID = "id";
+
+    public static final String COL_PARENT_ID = "parent_id";
+
+    public static final String COL_NAME = "name";
+
+    public static final String COL_ENNAME = "enname";
+
+    public static final String COL_DESCRIPTION = "description";
+
+    public static final String COL_CREATED = "created";
+
+    public static final String COL_UPDATED = "updated";
 }
